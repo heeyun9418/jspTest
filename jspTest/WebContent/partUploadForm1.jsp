@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>단일 파일 업로드 테스트</h1>
-<form action="partUploadPro1">
+<form action="partuploadpro1" method="post" enctype="multipart/form-data">
 	<label for="wirter">작성자 : </label>
 	<input type="text" name="writer" id="writer"><br>
 	
