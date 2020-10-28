@@ -3,7 +3,7 @@
 <%@ page import="java.sql.*, javax.sql.*, javax.naming.*"%>
 <%
 Connection conn=null;
-String sql="SELECT * FROM student";
+String sql="SELECT * FROM employee";
 PreparedStatement pstmt=null;
 ResultSet rs=null;
 ResultSetMetaData rsmd=null;
@@ -18,8 +18,8 @@ try {
 	rsmd=rs.getMetaData();
 	
 	out.println("칼럼 수 : " + rsmd.getColumnCount() + "<br>");
-	for(int i=1; i<rsmd.getColumnCount(); i++) {
-		out.println(i + "번째 칼럼의 이름 : " + rsmd.getColumnName(i) + " : ");
+	for(int i=1; i<=rsmd.getColumnCount(); i++) {
+		out.println(i + "번째 칼럼의 이름 : " + rsmd.getColumnName(i) + "<br>");
 		out.println(i + "번째 칼럼의 타입 이름 : " + rsmd.getColumnTypeName(i) + "<br>");
 	}
 	
