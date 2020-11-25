@@ -14,7 +14,7 @@ FileInputStream in = new FileInputStream(sFilePath);
 String sMimeType = getServletContext().getMimeType(sFilePath);
 System.out.println("sMimeType>>>" + sMimeType);
 
-if(sMimeType == null) {
+if(sMimeType == null) 
 	sMimeType = "application/octet-stream";
 	
 	response.setContentType(sMimeType);
@@ -38,7 +38,7 @@ if(sMimeType == null) {
 	out2.flush();
 	out2.close();
 	in.close();
-}
+
 %>
 <!DOCTYPE html>
 <html>
